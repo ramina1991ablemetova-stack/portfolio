@@ -1,0 +1,250 @@
+:root {
+  color-scheme: dark;
+  --background: #101827;
+  --surface: #1A2638;
+  --accent: #E8BC68;
+  --accent-surface: #29364A;
+  --border: #344258;
+  --heading: #F5F1E8;
+  --text: #B8C4D6;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--text);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.6;
+}
+
+a {
+  color: var(--accent);
+  text-underline-offset: 0.2em;
+}
+
+a:hover {
+  text-decoration-thickness: 2px;
+}
+
+a:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 5px;
+  border-radius: 4px;
+}
+
+.site-header,
+.navigation,
+.skills,
+.project-card {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.site-header {
+  justify-content: center;
+  padding: 24px;
+  border-bottom: 1px solid var(--border);
+}
+
+.navigation {
+  justify-content: center;
+  column-gap: 28px;
+}
+
+.navigation a {
+  font-weight: 600;
+}
+
+.container {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 40px 24px 64px;
+}
+
+section + section {
+  margin-top: 40px;
+}
+
+section {
+  scroll-margin-top: 24px;
+}
+
+.profile,
+.project-card {
+  padding: 32px;
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  background: var(--surface);
+}
+
+h1,
+h2,
+h3 {
+  color: var(--heading);
+  line-height: 1.25;
+}
+
+h1 {
+  margin: 0 0 20px;
+  font-size: clamp(2rem, 5vw, 3.25rem);
+  letter-spacing: -0.035em;
+}
+
+h2 {
+  margin: 0 0 20px;
+  font-size: 1.5rem;
+}
+
+h3 {
+  margin: 0 0 12px;
+  font-size: 1.25rem;
+}
+
+p {
+  margin: 0 0 20px;
+  color: var(--text);
+}
+
+#greeting {
+  color: var(--accent);
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.skills {
+  margin: 0 0 24px;
+  padding: 0;
+  list-style: none;
+  gap: 10px;
+}
+
+.tag {
+  padding: 6px 16px;
+  border-radius: 999px;
+  background: var(--accent-surface);
+  color: var(--accent);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.tag-accent {
+  background: var(--accent);
+  color: var(--background);
+}
+
+.project-card {
+  align-items: center;
+  gap: 28px;
+}
+
+.project-preview {
+  display: flex;
+  flex: 1 1 240px;
+  align-items: center;
+  justify-content: center;
+  min-height: 220px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #101827, #243B58);
+  color: var(--accent);
+  font-size: 2.5rem;
+  font-weight: 750;
+  letter-spacing: 0.12em;
+}
+
+.project-copy {
+  flex: 2 1 280px;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.project-copy p {
+  margin-bottom: 0;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  padding: 10px 18px;
+  border: 1px solid var(--accent);
+  border-radius: 12px;
+  background: var(--accent);
+  color: var(--background);
+  cursor: pointer;
+}
+
+button:hover {
+  background: #F0CA81;
+}
+
+button:focus-visible,
+input:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 5px;
+}
+
+#hello {
+  margin-bottom: 20px;
+}
+
+#contact-form {
+  margin-top: 24px;
+}
+
+#contact-form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+#contact-form input {
+  width: 100%;
+  max-width: 480px;
+  padding: 10px 14px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--surface);
+  color: var(--text);
+}
+
+#contact-form input::placeholder {
+  color: var(--text);
+  opacity: 1;
+}
+
+.greeting-sparkles {
+  display: inline-flex;
+  gap: 4px;
+  margin-inline-start: 10px;
+  vertical-align: middle;
+  opacity: 1;
+  pointer-events: none;
+  animation: greeting-sparkles-fade 1s ease-out 35s forwards;
+}
+
+.greeting-sparkles img {
+  display: block;
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+@keyframes greeting-sparkles-fade {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}

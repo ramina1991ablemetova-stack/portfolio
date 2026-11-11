@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Учебное портфолио Алии</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navigation" aria-label="Основная навигация">
+      <a href="#about">Обо мне</a>
+      <a href="#projects">Проекты</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+  </header>
+  <main class="container">
+    <section id="about" class="profile">
+      <h1>Учебное портфолио Алии</h1>
+      <p id="greeting">Привет!</p>
+      <button id="hello" type="button">Поздороваться</button>
+      <p>Я Алия — вымышленная героиня учебного портфолио. Изучаю создание сайтов.</p>
+      <h2>Навыки</h2>
+      <ul class="skills">
+        <li class="tag tag-accent">HTML</li>
+        <li class="tag">CSS</li>
+        <li class="tag">JavaScript</li>
+      </ul>
+      <a href="#projects">Посмотреть проекты</a>
+    </section>
+    <section id="projects">
+      <h2>Проекты</h2>
+      <article class="project-card">
+        <div class="project-preview">ALMA</div>
+        <div class="project-copy">
+          <h3>ALMA — учебный сайт</h3>
+          <p>Вымышленный проект для практики HTML, CSS и JavaScript.</p>
+        </div>
+      </article>
+    </section>
+    <section id="contacts">
+      <h2>Контакты</h2>
+      <p>Контактные данные — учебная заглушка.</p>
+      <button id="contact-button" type="button" aria-expanded="false" aria-controls="contact-form">Показать учебную форму</button>
+      <form id="contact-form" aria-describedby="form-note" autocomplete="off" hidden>
+        <p id="form-note">Это учебная форма: она ничего не отправляет и не сохраняет. Вводите только вымышленные данные.</p>
+        <label for="practice-message">Учебное сообщение</label>
+        <input id="practice-message" type="text" placeholder="Например: привет, ALMA!" autocomplete="off">
+      </form>
+    </section>
+  </main>
+</body>
+</html>
